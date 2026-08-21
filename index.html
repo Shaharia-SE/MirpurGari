@@ -3,26 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Office Transport & Break Fast Management</title>
-
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #f4f7fb;
             color: #1f2937;
         }
-
-        /* =========================
-           HEADER
-        ========================== */
-
         .header {
             background: linear-gradient(135deg, #0f172a, #1e3a8a);
             color: white;
@@ -35,13 +27,11 @@
             z-index: 100;
             box-shadow: 0 5px 20px rgba(0,0,0,0.15);
         }
-
         .brand {
             display: flex;
             align-items: center;
             gap: 14px;
         }
-
         .logo {
             width: 52px;
             height: 52px;
@@ -55,71 +45,54 @@
             font-weight: bold;
             box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
-
         .brand h1 {
             font-size: 20px;
         }
-
         .brand p {
             font-size: 12px;
             opacity: 0.8;
             margin-top: 3px;
         }
-
         .menu {
             display: flex;
             gap: 25px;
         }
-
         .menu a {
             color: white;
             text-decoration: none;
             font-size: 14px;
             font-weight: 600;
         }
-
         .menu a:hover {
             color: #93c5fd;
         }
-
-        /* =========================
-           HERO
-        ========================== */
-
         .hero {
             padding: 70px 7%;
-            background:
-                linear-gradient(rgba(15,23,42,.88), rgba(30,58,138,.88)),
-                url("https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1600&q=80");
+            background: linear-gradient(rgba(15,23,42,.88), rgba(30,58,138,.88)), url("https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1600&q=80");
             background-size: cover;
             background-position: center;
             color: white;
         }
-
         .hero-content {
             max-width: 850px;
         }
-
         .hero h2 {
             font-size: 42px;
             line-height: 1.15;
             margin-bottom: 18px;
         }
-
         .hero p {
             font-size: 17px;
             line-height: 1.7;
             color: #dbeafe;
             max-width: 700px;
         }
-
         .hero-buttons {
             margin-top: 28px;
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
         }
-
         .btn {
             padding: 13px 20px;
             border-radius: 10px;
@@ -127,36 +100,26 @@
             font-weight: bold;
             display: inline-block;
         }
-
         .btn-primary {
             background: white;
             color: #1d4ed8;
         }
-
         .btn-secondary {
             border: 1px solid rgba(255,255,255,.4);
             color: white;
         }
-
-        /* =========================
-           CONTAINER
-        ========================== */
-
         .container {
             width: 86%;
             max-width: 1250px;
             margin: auto;
         }
-
         .section {
             padding: 65px 0;
         }
-
         .section-title {
             text-align: center;
             margin-bottom: 40px;
         }
-
         .section-title span {
             display: inline-block;
             color: #2563eb;
@@ -166,21 +129,14 @@
             letter-spacing: 1px;
             margin-bottom: 8px;
         }
-
         .section-title h2 {
             font-size: 30px;
             color: #111827;
         }
-
         .section-title p {
             margin-top: 10px;
             color: #6b7280;
         }
-
-        /* =========================
-           STATS
-        ========================== */
-
         .stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -189,7 +145,6 @@
             position: relative;
             z-index: 5;
         }
-
         .stat-card {
             background: white;
             border-radius: 16px;
@@ -199,7 +154,6 @@
             align-items: center;
             gap: 15px;
         }
-
         .stat-icon {
             width: 50px;
             height: 50px;
@@ -211,113 +165,87 @@
             justify-content: center;
             font-size: 23px;
         }
-
         .stat-card h3 {
             font-size: 24px;
         }
-
         .stat-card p {
             color: #6b7280;
             font-size: 13px;
             margin-top: 3px;
         }
-
-          /* =========================
-       DRIVER
-    ========================== */
-
-    .vehicle-grid {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        gap: 22px;
-    }
-
-    .vehicle-card {
-        width: 380px;
-        background: white;
-        border-radius: 18px;
-        overflow: hidden;
-        box-shadow: 0 8px 30px rgba(15,23,42,.08);
-        transition: .3s;
-    }
-
-    .vehicle-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(15,23,42,.14);
-    }
-
-    .vehicle-image {
-        height: 260px;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .vehicle-body {
-        padding: 22px;
-    }
-
-    .vehicle-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 18px;
-    }
-
-    .vehicle-top h3 {
-        font-size: 21px;
-        color: #111827;
-    }
-
-    .badge {
-        background: #dcfce7;
-        color: #15803d;
-        font-size: 11px;
-        font-weight: bold;
-        padding: 6px 10px;
-        border-radius: 20px;
-    }
-
-    .vehicle-info {
-        display: grid;
-        gap: 13px;
-    }
-
-    .info-row {
-        display: flex;
-        align-items: center;
-        gap: 9px;
-        color: #64748b;
-        font-size: 14px;
-    }
-
-    .info-row strong {
-        color: #1f2937;
-    }
-
-    @media(max-width: 600px) {
-
-        .vehicle-card {
-            width: 100%;
-            max-width: 380px;
-        }
-
         .vehicle-grid {
-            padding: 0 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 22px;
         }
-
-    }
-        /* =========================
-           MEMBER CARDS
-        ========================== */
-
+        .vehicle-card {
+            width: 380px;
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(15,23,42,.08);
+            transition: .3s;
+        }
+        .vehicle-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(15,23,42,.14);
+        }
+        .vehicle-image {
+            height: 260px;
+            background-size: cover;
+            background-position: center;
+        }
+        .vehicle-body {
+            padding: 22px;
+        }
+        .vehicle-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+        .vehicle-top h3 {
+            font-size: 21px;
+            color: #111827;
+        }
+        .badge {
+            background: #dcfce7;
+            color: #15803d;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 6px 10px;
+            border-radius: 20px;
+        }
+        .vehicle-info {
+            display: grid;
+            gap: 13px;
+        }
+        .info-row {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: #64748b;
+            font-size: 14px;
+        }
+        .info-row strong {
+            color: #1f2937;
+        }
+        @media(max-width: 600px) {
+            .vehicle-card {
+                width: 100%;
+                max-width: 380px;
+            }
+            .vehicle-grid {
+                padding: 0 15px;
+            }
+        }
         .member-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 22px;
         }
-
         .member-card {
             background: white;
             border-radius: 18px;
@@ -325,17 +253,14 @@
             box-shadow: 0 8px 30px rgba(15,23,42,.08);
             transition: .3s;
         }
-
         .member-card:hover {
             transform: translateY(-5px);
         }
-
         .member-head {
             display: flex;
             gap: 15px;
             align-items: center;
         }
-
         .member-image {
             width: 72px;
             height: 72px;
@@ -343,19 +268,16 @@
             object-fit: cover;
             border: 3px solid #dbeafe;
         }
-
         .member-name {
             font-size: 17px;
             font-weight: bold;
         }
-
         .member-role {
             color: #2563eb;
             font-size: 13px;
             margin-top: 5px;
             font-weight: 600;
         }
-
         .member-details {
             margin-top: 20px;
             border-top: 1px solid #eef2f7;
@@ -363,58 +285,44 @@
             display: grid;
             gap: 11px;
         }
-
         .member-detail {
             display: flex;
             justify-content: space-between;
             font-size: 13px;
         }
-
         .member-detail span:first-child {
             color: #64748b;
         }
-
         .member-detail span:last-child {
             font-weight: bold;
             color: #1f2937;
         }
-
         .present {
             color: #16a34a !important;
         }
-
-        /* =========================
-           MEAL TABLE
-        ========================== */
-
         .meal-wrapper {
             background: white;
             border-radius: 20px;
             box-shadow: 0 8px 30px rgba(15,23,42,.08);
             overflow: hidden;
         }
-
         .meal-header {
             background: linear-gradient(135deg, #1e3a8a, #2563eb);
             color: white;
             padding: 25px;
         }
-
         .meal-header h3 {
             font-size: 21px;
         }
-
         .meal-header p {
             font-size: 13px;
             margin-top: 6px;
             color: #dbeafe;
         }
-
         .meal-table {
             width: 100%;
             border-collapse: collapse;
         }
-
         .meal-table th {
             background: #f8fafc;
             text-align: left;
@@ -422,17 +330,14 @@
             font-size: 13px;
             color: #475569;
         }
-
         .meal-table td {
             padding: 16px;
             border-top: 1px solid #eef2f7;
             font-size: 14px;
         }
-
         .meal-table tr:hover {
             background: #f8fbff;
         }
-
         .month-number {
             width: 32px;
             height: 32px;
@@ -444,20 +349,17 @@
             justify-content: center;
             font-weight: bold;
         }
-
         .meal-person {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-
         .small-image {
             width: 38px;
             height: 38px;
             border-radius: 50%;
             object-fit: cover;
         }
-
         .meal-status {
             display: inline-block;
             padding: 6px 10px;
@@ -467,87 +369,50 @@
             font-size: 11px;
             font-weight: bold;
         }
-
-        /* =========================
-           PICKUP ROUTE
-        ========================== */
-
         .route-box {
             background: white;
             border-radius: 20px;
             padding: 30px;
             box-shadow: 0 8px 30px rgba(15,23,42,.08);
         }
-
-        .route {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-            gap: 20px;
-        }
-
         .location-box {
             padding: 22px;
             border-radius: 15px;
             background: #f8fafc;
         }
-
         .location-box small {
             color: #64748b;
             display: block;
             margin-bottom: 8px;
         }
-
         .location-box h3 {
             font-size: 19px;
         }
-
-        .arrow {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #eff6ff;
-            color: #2563eb;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-        }
-
-        /* =========================
-           FOOTER
-        ========================== */
-
         footer {
             background: #0f172a;
             color: white;
             padding: 40px 7%;
             margin-top: 20px;
         }
-
         .footer-content {
             display: flex;
             justify-content: space-between;
             gap: 30px;
         }
-
         .footer-brand h2 {
             margin-bottom: 8px;
         }
-
         .footer-brand p {
             color: #94a3b8;
             font-size: 13px;
             line-height: 1.7;
             max-width: 450px;
         }
-
         .footer-contact p {
             color: #cbd5e1;
             margin-bottom: 8px;
             font-size: 13px;
         }
-
         .copyright {
             border-top: 1px solid #1e293b;
             margin-top: 25px;
@@ -556,1469 +421,470 @@
             color: #64748b;
             font-size: 12px;
         }
-
-        /* =========================
-           RESPONSIVE
-        ========================== */
-
         @media(max-width: 1000px) {
-
             .stats {
                 grid-template-columns: repeat(2, 1fr);
             }
-
             .vehicle-grid,
             .member-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-
         @media(max-width: 700px) {
-
             .header {
                 padding: 14px 5%;
             }
-
             .menu {
                 display: none;
             }
-
             .hero {
                 padding: 55px 5%;
             }
-
             .hero h2 {
                 font-size: 31px;
             }
-
             .container {
                 width: 90%;
             }
-
             .stats {
                 width: 90%;
                 grid-template-columns: 1fr 1fr;
             }
-
             .vehicle-grid,
             .member-grid {
                 grid-template-columns: 1fr;
             }
-
-            .route {
-                grid-template-columns: 1fr;
-            }
-
-            .arrow {
-                margin: auto;
-                transform: rotate(90deg);
-            }
-
             .meal-wrapper {
                 overflow-x: auto;
             }
-
             .meal-table {
                 min-width: 700px;
             }
-
             .footer-content {
                 flex-direction: column;
             }
         }
-
         @media(max-width: 450px) {
-
             .stats {
                 grid-template-columns: 1fr;
             }
-
             .brand h1 {
                 font-size: 16px;
             }
-
             .hero h2 {
                 font-size: 27px;
             }
         }
     </style>
 </head>
-
 <body>
 
-<!-- =========================
-     HEADER
-========================== -->
-
 <header class="header">
-
     <div class="brand">
-
-        <div class="logo">
-            🚐
-        </div>
-
+        <div class="logo">🚐</div>
         <div>
             <h1>Smart Transport</h1>
             <p>Office Transport & Meal Management</p>
         </div>
-
     </div>
-
     <nav class="menu">
         <a href="#vehicles">Vehicles</a>
         <a href="#members">Members</a>
         <a href="#meals">Break Fast</a>
         <a href="#contact">Contact</a>
     </nav>
-
 </header>
 
-
-<!-- =========================
-     HERO
-========================== -->
-
 <section class="hero">
-
     <div class="hero-content">
-
-        <h2>
-            Smart Transport &  
-            <br>
-            Member Management
-        </h2>
-
-        <p>
-            সহজে দেখুন কে কোন গাড়িতে উঠবে,
-            কোথা থেকে pickup করবে এবং কোন সময়ে
-            গাড়িতে উঠতে হবে। একইসাথে ১২ মাসের
-            খাবারের দায়িত্বও সুন্দরভাবে পরিচালনা করুন।
-        </p>
-
+        <h2>Smart Transport & <br>Member Management</h2>
+        <p>সহজে দেখুন কে কোন গাড়িতে উঠবে, কোথা থেকে pickup করবে এবং কোন সময়ে গাড়িতে উঠতে হবে। একইসাথে ১২ মাসের খাবারের দায়িত্বও সুন্দরভাবে পরিচালনা করুন।</p>
         <div class="hero-buttons">
-
-            <a href="#members" class="btn btn-primary">
-                View Members
-            </a>
-
-            <a href="#meals" class="btn btn-secondary">
-                12 Months Meal Plan
-            </a>
-
+            <a href="#members" class="btn btn-primary">View Members</a>
+            <a href="#meals" class="btn btn-secondary">12 Months Meal Plan</a>
         </div>
-
     </div>
-
 </section>
 
-
-<!-- =========================
-     STATS
-========================== -->
-
 <div class="container">
-
     <div class="stats">
-
         <div class="stat-card">
-
-            <div class="stat-icon">
-                👥
-            </div>
-
+            <div class="stat-icon">👥</div>
             <div>
                 <h3>09</h3>
                 <p>Total Members</p>
             </div>
-
         </div>
-
-
         <div class="stat-card">
-
-            <div class="stat-icon">
-                🚐
-            </div>
-
+            <div class="stat-icon">🚐</div>
             <div>
                 <h3>01</h3>
                 <p>Total Vehicles</p>
             </div>
-
         </div>
-
-
         <div class="stat-card">
-
-            <div class="stat-icon">
-                📍
-            </div>
-
+            <div class="stat-icon">📍</div>
             <div>
                 <h3>05</h3>
                 <p>Pickup Points</p>
             </div>
-
         </div>
-
-
         <div class="stat-card">
-
-            <div class="stat-icon">
-                🍱
-            </div>
-
+            <div class="stat-icon">🍱</div>
             <div>
                 <h3>12</h3>
                 <p>Meal Months</p>
             </div>
-
         </div>
-
     </div>
-
 </div>
-
-
-<!-- =========================
-     DRIVER
-========================== -->
 
 <section class="section" id="vehicles">
-
     <div class="container">
-
         <div class="section-title">
-
             <span>Driver Information</span>
-
             <h2>Our Driver</h2>
-
-            <p>
-                Driver সম্পর্কে বিস্তারিত তথ্য
-            </p>
-
+            <p>Driver সম্পর্কে বিস্তারিত তথ্য</p>
         </div>
-
-
         <div class="vehicle-grid">
-
-            <!-- Driver Card -->
-
             <div class="vehicle-card">
-
-               <div
-    class="vehicle-image"
-    style="
-        background-image: url('https://i.ibb.co.com/pGPRh9K/rafiq.jpg');
-    ">
-</div>
-
-
+                <div class="vehicle-image" style="background-image: url('https://i.ibb.co.com/pGPRh9K/rafiq.jpg');"></div>
                 <div class="vehicle-body">
-
                     <div class="vehicle-top">
-
                         <h3>Rofiq</h3>
-
-                        <span class="badge">
-                            Active
-                        </span>
-
+                        <span class="badge">Active</span>
                     </div>
-
-
                     <div class="vehicle-info">
-
-                        <div class="info-row">
-                            👨‍✈️
-                            <span>Designation:</span>
-                            <strong>Driver</strong>
-                        </div>
-
-                        <div class="info-row">
-                            📍
-                            <span>Address:</span>
-                            <strong>Mirpur, Dhaka</strong>
-                        </div>
-
-                        <div class="info-row">
-                            📞
-                            <span>Phone:</span>
-                            <strong>01710000000</strong>
-                        </div>
-
-                        <div class="info-row">
-                            🪪
-                            <span>License:</span>
-                            <strong>Professional</strong>
-                        </div>
-
-                        <div class="info-row">
-                            🕐
-                            <span>Duty Time:</span>
-                            <strong>7:00 AM - 7:00 PM</strong>
-                        </div>
-
+                        <div class="info-row">👨‍✈️ <span>Designation:</span> <strong>Driver</strong></div>
+                        <div class="info-row">📍 <span>Address:</span> <strong>Mirpur, Dhaka</strong></div>
+                        <div class="info-row">📞 <span>Phone:</span> <strong>01710000000</strong></div>
+                        <div class="info-row">🪪 <span>License:</span> <strong>Professional</strong></div>
+                        <div class="info-row">🕐 <span>Duty Time:</span> <strong>7:00 AM - 7:00 PM</strong></div>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
-<!-- =========================
-     PICKUP ROUTE
-========================== -->
-
-
-
-<!-- =========================
-     MEMBERS
-========================== -->
 
 <section class="section" id="members">
-
     <div class="container">
-
         <div class="section-title">
-
             <span>People</span>
-
             <h2>Member Transport List</h2>
-
-            <p>
-                প্রত্যেক সদস্যের গাড়ি ও pickup location
-            </p>
-
+            <p>প্রত্যেক সদস্যের গাড়ি ও pickup location</p>
         </div>
-
-
         <div class="member-grid">
-
-
-            <!-- Member 01 -->
-
-         <div class="member-card">
-
-                <div class="member-head">
-
-                    <img
-                        class="member-image"
-                        src="https://i.ibb.co.com/jZ35BP4R/Whats-App-Image-2026-08-14-at-2-55-21-PM.jpg"
-                        alt="FarjanaZaman"
-                    >
-
-                    <div>
-
-                        <div class="member-name">
-                            Farjana Zaman
-                        </div>
-
-                        <div class="member-role">
-                            President
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="member-details">
-
-                    <div class="member-detail">
-                        <span>📍 Pickup</span>
-                        <span>Mirpur 12</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>⏰ Time</span>
-                        <span>7:50 AM</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>🚐 Vehicle</span>
-                        <span>Vehicle 01</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>📌 Status</span>
-                        <span class="present">Present</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Member 02 -->
-
+            <!-- Member cards -->
             <div class="member-card">
-
                 <div class="member-head">
-
-                    <img
-                        class="member-image"
-                        src="https://i.ibb.co.com/HfFJHRX2/mamud.jpg"
-                        alt="Mahmud"
-                    >
-
+                    <img class="member-image" src="https://i.ibb.co.com/jZ35BP4R/Whats-App-Image-2026-08-14-at-2-55-21-PM.jpg" alt="FarjanaZaman">
                     <div>
-
-                        <div class="member-name">
-                            Mahmud
-                        </div>
-
-                        <div class="member-role">
-                            Vice President
-                        </div>
-
+                        <div class="member-name">Farjana Zaman</div>
+                        <div class="member-role">President</div>
                     </div>
-
                 </div>
-
-
                 <div class="member-details">
-
-                    <div class="member-detail">
-                        <span>📍 Pickup</span>
-                        <span>Shyamoli</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>⏰ Time</span>
-                        <span>8:10 AM</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>🚐 Vehicle</span>
-                        <span>Vehicle 01</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>📌 Status</span>
-                        <span class="present">Present</span>
-                    </div>
-
+                    <div class="member-detail"><span>📍 Pickup</span><span>Mirpur 12</span></div>
+                    <div class="member-detail"><span>⏰ Time</span><span>7:50 AM</span></div>
+                    <div class="member-detail"><span>🚐 Vehicle</span><span>Vehicle 01</span></div>
+                    <div class="member-detail"><span>📌 Status</span><span class="present">Present</span></div>
                 </div>
-
             </div>
-
-
-            <!-- Member 03 -->
-
             <div class="member-card">
-
                 <div class="member-head">
-
-                    <img
-                        class="member-image"
-                        src="https://i.ibb.co.com/WvM9Cym2/nasrin.jpg"
-                        alt="Nasrin Akter"
-                    >
-
+                    <img class="member-image" src="https://i.ibb.co.com/HfFJHRX2/mamud.jpg" alt="Mahmud">
                     <div>
-
-                        <div class="member-name">
-                            Nasrin Akter
-                        </div>
-
-                        <div class="member-role">
-                            General Secretary
-                        </div>
-
+                        <div class="member-name">Mahmud</div>
+                        <div class="member-role">Vice President</div>
                     </div>
-
                 </div>
-
-
                 <div class="member-details">
-
-                    <div class="member-detail">
-                        <span>📍 Pickup</span>
-                        <span>Bijoy Soroni</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>⏰ Time</span>
-                        <span>8:50 AM</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>🚐 Vehicle</span>
-                        <span>Vehicle 01</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>📌 Status</span>
-                        <span class="present">Present</span>
-                    </div>
-
+                    <div class="member-detail"><span>📍 Pickup</span><span>Shyamoli</span></div>
+                    <div class="member-detail"><span>⏰ Time</span><span>8:10 AM</span></div>
+                    <div class="member-detail"><span>🚐 Vehicle</span><span>Vehicle 01</span></div>
+                    <div class="member-detail"><span>📌 Status</span><span class="present">Present</span></div>
                 </div>
-
             </div>
-
-
-            <!-- Member 04 -->
-
             <div class="member-card">
-
                 <div class="member-head">
-
-                    <img
-                        class="member-image"
-                        src="https://i.ibb.co.com/pv2jFfG5/mamun.png"
-                        alt="Abdullah Al Mamun"
-                    >
-
+                    <img class="member-image" src="https://i.ibb.co.com/WvM9Cym2/nasrin.jpg" alt="Nasrin Akter">
                     <div>
-
-                        <div class="member-name">
-                            Abdullah Al Mamun
-                        </div>
-
-                        <div class="member-role">
-                            Treasurer
-                        </div>
-
+                        <div class="member-name">Nasrin Akter</div>
+                        <div class="member-role">General Secretary</div>
                     </div>
-
                 </div>
-
-
                 <div class="member-details">
-
-                    <div class="member-detail">
-                        <span>📍 Pickup</span>
-                        <span>Ansar Camp</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>⏰ Time</span>
-                        <span>8:00 AM</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>🚐 Vehicle</span>
-                        <span>Vehicle 01</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>📌 Status</span>
-                        <span class="present">Present</span>
-                    </div>
-
+                    <div class="member-detail"><span>📍 Pickup</span><span>Bijoy Soroni</span></div>
+                    <div class="member-detail"><span>⏰ Time</span><span>8:50 AM</span></div>
+                    <div class="member-detail"><span>🚐 Vehicle</span><span>Vehicle 01</span></div>
+                    <div class="member-detail"><span>📌 Status</span><span class="present">Present</span></div>
                 </div>
-
             </div>
-
-
-            <!-- Member 05 -->
-
             <div class="member-card">
-
                 <div class="member-head">
-
-                    <img
-                        class="member-image"
-                        src="https://i.ibb.co.com/7dm4cVV2/ba873e75932149c0829fd189bcb511c3.jpg"
-                        alt="Tumpa"
-                    >
-
+                    <img class="member-image" src="https://i.ibb.co.com/pv2jFfG5/mamun.png" alt="Abdullah Al Mamun">
                     <div>
-
-                        <div class="member-name">
-                            Tumpa
-                        </div>
-
-                        <div class="member-role">
-                            Member
-                        </div>
-
+                        <div class="member-name">Abdullah Al Mamun</div>
+                        <div class="member-role">Treasurer</div>
                     </div>
-
                 </div>
-
-
                 <div class="member-details">
-
-                    <div class="member-detail">
-                        <span>📍 Pickup</span>
-                        <span>Mirpur DOHS</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>⏰ Time</span>
-                        <span>7:30 AM</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>🚐 Vehicle</span>
-                        <span>Vehicle 01</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>📌 Status</span>
-                        <span class="present">Present</span>
-                    </div>
-
+                    <div class="member-detail"><span>📍 Pickup</span><span>Ansar Camp</span></div>
+                    <div class="member-detail"><span>⏰ Time</span><span>8:00 AM</span></div>
+                    <div class="member-detail"><span>🚐 Vehicle</span><span>Vehicle 01</span></div>
+                    <div class="member-detail"><span>📌 Status</span><span class="present">Present</span></div>
                 </div>
-
             </div>
-
-
-            <!-- Member 06 -->
-
             <div class="member-card">
-
                 <div class="member-head">
-
-                    <img
-                        class="member-image"
-                        src="https://i.ibb.co.com/N6zBYTtP/Chat-GPT-Image-Jun-29-2026-04-50-19-PM.png"
-                        alt="Rony"
-                    >
-
+                    <img class="member-image" src="https://i.ibb.co.com/7dm4cVV2/ba873e75932149c0829fd189bcb511c3.jpg" alt="Tumpa">
                     <div>
-
-                        <div class="member-name">
-                            Rony
-                        </div>
-
-                        <div class="member-role">
-                            Member
-                        </div>
-
+                        <div class="member-name">Tumpa</div>
+                        <div class="member-role">Member</div>
                     </div>
-
                 </div>
-
-
                 <div class="member-details">
-
-                    <div class="member-detail">
-                        <span>📍 Pickup</span>
-                        <span>Ansar Camp </span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>⏰ Time</span>
-                        <span>8:00 AM</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>🚐 Vehicle</span>
-                        <span>Vehicle 01</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>📌 Status</span>
-                        <span class="present">Present</span>
-                    </div>
-
+                    <div class="member-detail"><span>📍 Pickup</span><span>Mirpur DOHS</span></div>
+                    <div class="member-detail"><span>⏰ Time</span><span>7:30 AM</span></div>
+                    <div class="member-detail"><span>🚐 Vehicle</span><span>Vehicle 01</span></div>
+                    <div class="member-detail"><span>📌 Status</span><span class="present">Present</span></div>
                 </div>
-
             </div>
-
-               <!-- Member 07 -->
-
             <div class="member-card">
-
                 <div class="member-head">
-
-                    <img
-                        class="member-image"
-                        src="https://i.ibb.co.com/ks6qL44r/Cdeapture.png"
-                        alt=" Saikat"
-                    >
-
+                    <img class="member-image" src="https://i.ibb.co.com/N6zBYTtP/Chat-GPT-Image-Jun-29-2026-04-50-19-PM.png" alt="Rony">
                     <div>
-
-                        <div class="member-name">
-                             Saikat
-                        </div>
-
-                        <div class="member-role">
-                            Member
-                        </div>
-
+                        <div class="member-name">Rony</div>
+                        <div class="member-role">Member</div>
                     </div>
-
                 </div>
-
-
                 <div class="member-details">
-
-                    <div class="member-detail">
-                        <span>📍 Pickup</span>
-                        <span>Ansar Camp </span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>⏰ Time</span>
-                        <span>8:00 AM</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>🚐 Vehicle</span>
-                        <span>Vehicle 01</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>📌 Status</span>
-                        <span class="present">Present</span>
-                    </div>
-
+                    <div class="member-detail"><span>📍 Pickup</span><span>Ansar Camp</span></div>
+                    <div class="member-detail"><span>⏰ Time</span><span>8:00 AM</span></div>
+                    <div class="member-detail"><span>🚐 Vehicle</span><span>Vehicle 01</span></div>
+                    <div class="member-detail"><span>📌 Status</span><span class="present">Present</span></div>
                 </div>
-
             </div>
-            <!--  -->
-
-              <!-- Member 08 -->
-
             <div class="member-card">
-
                 <div class="member-head">
-
-                    <img
-                        class="member-image"
-                        src="https://i.ibb.co.com/mVQ6NWdx/Capddture.png"
-                        alt="Proshonjit"
-                    >
-
+                    <img class="member-image" src="https://i.ibb.co.com/ks6qL44r/Cdeapture.png" alt="Saikat">
                     <div>
-
-                        <div class="member-name">
-                            Proshonjit
-                        </div>
-
-                        <div class="member-role">
-                            Member
-                        </div>
-
+                        <div class="member-name">Saikat</div>
+                        <div class="member-role">Member</div>
                     </div>
-
                 </div>
-
-
                 <div class="member-details">
-
-                    <div class="member-detail">
-                        <span>📍 Pickup</span>
-                        <span>Ansar Camp </span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>⏰ Time</span>
-                        <span>8:00 AM</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>🚐 Vehicle</span>
-                        <span>Vehicle 01</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>📌 Status</span>
-                        <span class="present">Present</span>
-                    </div>
-
+                    <div class="member-detail"><span>📍 Pickup</span><span>Ansar Camp</span></div>
+                    <div class="member-detail"><span>⏰ Time</span><span>8:00 AM</span></div>
+                    <div class="member-detail"><span>🚐 Vehicle</span><span>Vehicle 01</span></div>
+                    <div class="member-detail"><span>📌 Status</span><span class="present">Present</span></div>
                 </div>
-
             </div>
-            <!--  -->
-              <!-- Member 09 -->
-
             <div class="member-card">
-
                 <div class="member-head">
-
-                    <img
-                        class="member-image"
-                        src="https://i.ibb.co.com/nqGbzjqV/Chat-GPT-Image-Aug-14-2026-11-04-42-AM.png"
-                        alt="Bappy"
-                    >
-
+                    <img class="member-image" src="https://i.ibb.co.com/mVQ6NWdx/Capddture.png" alt="Proshonjit">
                     <div>
-
-                        <div class="member-name">
-                            Bappy
-                        </div>
-
-                        <div class="member-role">
-                            Member
-                        </div>
-
+                        <div class="member-name">Proshonjit</div>
+                        <div class="member-role">Member</div>
                     </div>
-
                 </div>
-
-
                 <div class="member-details">
-
-                    <div class="member-detail">
-                        <span>📍 Pickup</span>
-                        <span>BNP Bazar</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>⏰ Time</span>
-                        <span>8:25 AM</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>🚐 Vehicle</span>
-                        <span>Vehicle 01</span>
-                    </div>
-
-                    <div class="member-detail">
-                        <span>📌 Status</span>
-                        <span class="present">Present</span>
-                    </div>
-
+                    <div class="member-detail"><span>📍 Pickup</span><span>Ansar Camp</span></div>
+                    <div class="member-detail"><span>⏰ Time</span><span>8:00 AM</span></div>
+                    <div class="member-detail"><span>🚐 Vehicle</span><span>Vehicle 01</span></div>
+                    <div class="member-detail"><span>📌 Status</span><span class="present">Present</span></div>
                 </div>
-
             </div>
-            <!--  -->
+            <div class="member-card">
+                <div class="member-head">
+                    <img class="member-image" src="https://i.ibb.co.com/nqGbzjqV/Chat-GPT-Image-Aug-14-2026-11-04-42-AM.png" alt="Bappy">
+                    <div>
+                        <div class="member-name">Bappy</div>
+                        <div class="member-role">Member</div>
+                    </div>
+                </div>
+                <div class="member-details">
+                    <div class="member-detail"><span>📍 Pickup</span><span>BNP Bazar</span></div>
+                    <div class="member-detail"><span>⏰ Time</span><span>8:25 AM</span></div>
+                    <div class="member-detail"><span>🚐 Vehicle</span><span>Vehicle 01</span></div>
+                    <div class="member-detail"><span>📌 Status</span><span class="present">Present</span></div>
+                </div>
+            </div>
         </div>
-
     </div>
-
 </section>
-
-
-<!-- =========================
-     MEAL MANAGEMENT
-========================== -->
 
 <section class="section" id="meals">
-
     <div class="container">
-
         <div class="section-title">
-
             <span>Meal Management</span>
-
             <h2>12 Months Meal Responsibility</h2>
-
-            <p>
-                কোন মাসে কে খাবারের ব্যবস্থা করবে
-            </p>
-
+            <p>কোন মাসে কে খাবারের ব্যবস্থা করবে</p>
         </div>
-
-
         <div class="meal-wrapper">
-
             <div class="meal-header">
-
                 <h3>🍱 Annual Break Fast Schedule - 2026</h3>
-
-                <p>
-                    প্রতি মাসে একজন দায়িত্বপ্রাপ্ত সদস্য
-                    খাবারের ব্যবস্থা করবেন।
-                </p>
-
+                <p>প্রতি মাসে একজন দায়িত্বপ্রাপ্ত সদস্য খাবারের ব্যবস্থা করবেন।</p>
             </div>
-
-
             <table class="meal-table">
-
                 <thead>
-
                     <tr>
-
                         <th>Month</th>
-
                         <th>Responsible Person</th>
-
                         <th>Role</th>
-
                         <th>Meal Type</th>
-
                         <th>Status</th>
-
                     </tr>
-
                 </thead>
-
-
                 <tbody>
-
                     <tr>
-
-                        <td>
-                            <span class="month-number">01</span>
-                            January
-                        </td>
-
-                        <td>
-
-                            <div class="meal-person">
-
-                                <img
-                                    class="small-image"
-                                     src="https://i.ibb.co.com/jZ35BP4R/Whats-App-Image-2026-08-14-at-2-55-21-PM.jpg"
-                                >
-
-                                <strong>
-                                    Farzana Zaman
-                                </strong>
-
-                            </div>
-
-                        </td>
-
+                        <td><span class="month-number">01</span> January</td>
+                        <td><div class="meal-person"><img class="small-image" src="https://i.ibb.co.com/jZ35BP4R/Whats-App-Image-2026-08-14-at-2-55-21-PM.jpg"><strong>Farzana Zaman</strong></div></td>
                         <td>President</td>
-
                         <td>Break Fast</td>
-
-                        <td>
-                            <span class="meal-status">
-                                Completed
-                            </span>
-                        </td>
-
+                        <td><span class="meal-status">Completed</span></td>
                     </tr>
-
-
                     <tr>
-
-                        <td>
-                            <span class="month-number">02</span>
-                            February
-                        </td>
-
-                        <td>
-
-                            <div class="meal-person">
-
-                                <img
-                                    class="small-image"
-                                    src="https://i.ibb.co.com/7dm4cVV2/ba873e75932149c0829fd189bcb511c3.jpg"
-                                >
-
-                                <strong>
-                                    Tumpa
-                                </strong>
-
-                            </div>
-
-                        </td>
-
+                        <td><span class="month-number">02</span> February</td>
+                        <td><div class="meal-person"><img class="small-image" src="https://i.ibb.co.com/7dm4cVV2/ba873e75932149c0829fd189bcb511c3.jpg"><strong>Tumpa</strong></div></td>
                         <td>Member</td>
-
                         <td>Break Fast</td>
-
-                        <td>
-                            <span class="meal-status">
-                                Completed
-                            </span>
-                        </td>
-
+                        <td><span class="meal-status">Completed</span></td>
                     </tr>
-
-
                     <tr>
-
-                        <td>
-                            <span class="month-number">03</span>
-                            March
-                        </td>
-
-                        <td>
-
-                            <div class="meal-person">
-
-                                <img
-                                    class="small-image"
-                                    src="https://i.ibb.co.com/ks6qL44r/Cdeapture.png"
-                                >
-
-                                <strong>
-                                    Saikat
-                                </strong>
-
-                            </div>
-
-                        </td>
-
+                        <td><span class="month-number">03</span> March</td>
+                        <td><div class="meal-person"><img class="small-image" src="https://i.ibb.co.com/ks6qL44r/Cdeapture.png"><strong>Saikat</strong></div></td>
                         <td>Member</td>
-
                         <td>Break Fast</td>
-
-                        <td>
-                            <span class="meal-status">
-                                Completed
-                            </span>
-                        </td>
-
+                        <td><span class="meal-status">Completed</span></td>
                     </tr>
-
-
                     <tr>
-
-                        <td>
-                            <span class="month-number">04</span>
-                            April
-                        </td>
-
-                        <td>
-
-                            <div class="meal-person">
-
-                                <img
-                                    class="small-image"
-                                    src="https://i.ibb.co.com/pv2jFfG5/mamun.png"
-                                >
-
-                                <strong>
-                                    Abdullah Al Mamun
-                                </strong>
-
-                            </div>
-
-                        </td>
-
+                        <td><span class="month-number">04</span> April</td>
+                        <td><div class="meal-person"><img class="small-image" src="https://i.ibb.co.com/pv2jFfG5/mamun.png"><strong>Abdullah Al Mamun</strong></div></td>
                         <td>Treasurer</td>
-
                         <td>Break Fast</td>
-
-                        <td>
-                            <span class="meal-status">
-                                Completed
-                            </span>
-                        </td>
-
+                        <td><span class="meal-status">Completed</span></td>
                     </tr>
-
-
                     <tr>
-
-                        <td>
-                            <span class="month-number">05</span>
-                            May
-                        </td>
-
-                        <td>
-
-                            <div class="meal-person">
-
-                                <img
-                                    class="small-image"
-                                     src="https://i.ibb.co.com/7dm4cVV2/ba873e75932149c0829fd189bcb511c3.jpg"
-                                >
-
-                                <strong>
-                                    Tumpa
-                                </strong>
-
-                            </div>
-
-                        </td>
-
+                        <td><span class="month-number">05</span> May</td>
+                        <td><div class="meal-person"><img class="small-image" src="https://i.ibb.co.com/7dm4cVV2/ba873e75932149c0829fd189bcb511c3.jpg"><strong>Tumpa</strong></div></td>
                         <td>Member</td>
-
                         <td>Break Fast</td>
-
-                        <td>
-                            <span class="meal-status">
-                                Completed
-                            </span>
-                        </td>
-
+                        <td><span class="meal-status">Completed</span></td>
                     </tr>
-
-
                     <tr>
-
-                        <td>
-                            <span class="month-number">06</span>
-                            June
-                        </td>
-
-                        <td>
-
-                            <div class="meal-person">
-
-                                <img
-                                    class="small-image"
-                                    src="https://i.ibb.co.com/N6zBYTtP/Chat-GPT-Image-Jun-29-2026-04-50-19-PM.png"
-                                >
-
-                                <strong>
-                                   Rony
-                                </strong>
-
-                            </div>
-
-                        </td>
-
+                        <td><span class="month-number">06</span> June</td>
+                        <td><div class="meal-person"><img class="small-image" src="https://i.ibb.co.com/N6zBYTtP/Chat-GPT-Image-Jun-29-2026-04-50-19-PM.png"><strong>Rony</strong></div></td>
                         <td>Member</td>
-
                         <td>Break Fast</td>
-
-                        <td>
-                            <span class="meal-status">
-                                Completed
-                            </span>
-                        </td>
-
+                        <td><span class="meal-status">Completed</span></td>
                     </tr>
-
-
                     <tr>
-
-                        <td>
-                            <span class="month-number">07</span>
-                            July
-                        </td>
-
-                        <td>
-                            <div class="meal-person">
-                                <img
-                                    class="small-image"
-                                    src="https://i.ibb.co.com/jZ35BP4R/Whats-App-Image-2026-08-14-at-2-55-21-PM.jpg"
-                                >
-                                <strong>Farjana Zaman</strong>
-                            </div>
-                        </td>
-
+                        <td><span class="month-number">07</span> July</td>
+                        <td><div class="meal-person"><img class="small-image" src="https://i.ibb.co.com/jZ35BP4R/Whats-App-Image-2026-08-14-at-2-55-21-PM.jpg"><strong>Farjana Zaman</strong></div></td>
                         <td>President</td>
-
                         <td>Break Fast</td>
-
-                        <td>
-                            <span class="meal-status">
-                                Completed
-                            </span>
-                        </td>
-
+                        <td><span class="meal-status">Completed</span></td>
                     </tr>
-
-
                     <tr>
-
-                        <td>
-                            <span class="month-number">08</span>
-                            August
-                        </td>
-
-                        <td>
-                            <div class="meal-person">
-                                <img
-                                    class="small-image"
-                                    
-                                   src="https://i.ibb.co.com/mVQ6NWdx/Capddture.png"
-                                >
-                                <strong>Proshonjit</strong>
-                            </div>
-                        </td>
-
+                        <td><span class="month-number">08</span> August</td>
+                        <td><div class="meal-person"><img class="small-image" src="https://i.ibb.co.com/mVQ6NWdx/Capddture.png"><strong>Proshonjit</strong></div></td>
                         <td>Member</td>
-
                         <td>Break Fast</td>
-
-                        <td>
-                            <span class="meal-status">
-                                Completed
-                            </span>
-                        </td>
-
+                        <td><span class="meal-status">Completed</span></td>
                     </tr>
-
-
                     <tr>
-
-                        <td>
-                            <span class="month-number">09</span>
-                            September
-                        </td>
-
-                        <td>
-                            <div class="meal-person">
-                                <img
-                                    class="small-image"
-                                   src="https://i.ibb.co.com/WvM9Cym2/nasrin.jpg"
-                                >
-                                <strong>Nasrin Akter</strong>
-                            </div>
-                        </td>
-
+                        <td><span class="month-number">09</span> September</td>
+                        <td><div class="meal-person"><img class="small-image" src="https://i.ibb.co.com/WvM9Cym2/nasrin.jpg"><strong>Nasrin Akter</strong></div></td>
                         <td>General Secretary</td>
-
                         <td>Break Fast</td>
-
-                        <td>
-                            <span class="meal-status">
-                                Upcoming
-                            </span>
-                        </td>
-
+                        <td><span class="meal-status">Upcoming</span></td>
                     </tr>
-
-
                     <tr>
-
-                        <td>
-                            <span class="month-number">10</span>
-                            October
-                        </td>
-
-                        <td>
-                            <div class="meal-person">
-                                <img
-                                    class="small-image"
-                                     src="https://i.ibb.co.com/HfFJHRX2/mamud.jpg"
-                                >
-                                <strong>Mahmud</strong>
-                            </div>
-                        </td>
-
-                        <td>Vice Precident</td>
-
+                        <td><span class="month-number">10</span> October</td>
+                        <td><div class="meal-person"><img class="small-image" src="https://i.ibb.co.com/HfFJHRX2/mamud.jpg"><strong>Mahmud</strong></div></td>
+                        <td>Vice President</td>
                         <td>Break Fast</td>
-
-                        <td>
-                            <span class="meal-status">
-                                Upcoming
-                            </span>
-                        </td>
-
+                        <td><span class="meal-status">Upcoming</span></td>
                     </tr>
-
-
                     <tr>
-
-                        <td>
-                            <span class="month-number">11</span>
-                            November
-                        </td>
-
-                        <td>
-                            <div class="meal-person">
-                                <img
-                                    class="small-image"
-                                     src="https://randomuser.me/api/portraits/women/57.jpg"
-                                >
-                                <strong>abc</strong>
-                            </div>
-                        </td>
-
+                        <td><span class="month-number">11</span> November</td>
+                        <td><div class="meal-person"><img class="small-image" src="https://randomuser.me/api/portraits/women/57.jpg"><strong>abc</strong></div></td>
                         <td>Member</td>
-
                         <td>Break Fast</td>
-
-                        <td>
-                            <span class="meal-status">
-                                Upcoming
-                            </span>
-                        </td>
-
+                        <td><span class="meal-status">Upcoming</span></td>
                     </tr>
-
-
                     <tr>
-
-                        <td>
-                            <span class="month-number">12</span>
-                            December
-                        </td>
-
-                        <td>
-                            <div class="meal-person">
-                                <img
-                                    class="small-image"
-                                    src="https://randomuser.me/api/portraits/women/57.jpg"
-                                >
-                                <strong>abc</strong>
-                            </div>
-                        </td>
-
+                        <td><span class="month-number">12</span> December</td>
+                        <td><div class="meal-person"><img class="small-image" src="https://randomuser.me/api/portraits/women/57.jpg"><strong>abc</strong></div></td>
                         <td>Member</td>
-
                         <td>Break Fast</td>
-
-                        <td>
-                            <span class="meal-status">
-                                Upcoming
-                            </span>
-                        </td>
-
+                        <td><span class="meal-status">Upcoming</span></td>
                     </tr>
-
                 </tbody>
-
             </table>
-
         </div>
-
     </div>
-
 </section>
-
-
-<!-- =========================
-     CONTACT
-========================== -->
 
 <section class="section" id="contact">
-
     <div class="container">
-
         <div class="section-title">
-
             <span>Contact</span>
-
             <h2>Transport Contact</h2>
-
-            <p>
-                Transport সংক্রান্ত যেকোনো প্রয়োজনে যোগাযোগ করুন
-            </p>
-
+            <p>Transport সংক্রান্ত যেকোনো প্রয়োজনে যোগাযোগ করুন</p>
         </div>
-
-
         <div class="route-box">
-
-            <div style="
-                display:grid;
-                grid-template-columns:repeat(3,1fr);
-                gap:20px;
-            ">
-
+            <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
                 <div class="location-box">
-
                     <small>Transport Manager</small>
-
-                    <h3>👤Abdullah Al Mamun</h3>
-
-                    <p style="margin-top:8px;color:#64748b;">
-                        📞 0 1713-221500
-                    </p>
-
+                    <h3>👤 Abdullah Al Mamun</h3>
+                    <p style="margin-top:8px;color:#64748b;">📞 0 1713-221500</p>
                 </div>
-
-
                 <div class="location-box">
-
                     <small>Driver - Vehicle 01</small>
-
                     <h3>👨‍✈️ Rofiq</h3>
-
-                    <p style="margin-top:8px;color:#64748b;">
-                        📞 01800-000000
-                    </p>
-
+                    <p style="margin-top:8px;color:#64748b;">📞 01800-000000</p>
                 </div>
-
-
                 <div class="location-box">
-
                     <small>Emergency</small>
-
                     <h3>📞 01900-000000</h3>
-
-                    <p style="margin-top:8px;color:#64748b;">
-                        Available 24/7
-                    </p>
-
+                    <p style="margin-top:8px;color:#64748b;">Available 24/7</p>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-
-<!-- =========================
-     FOOTER
-========================== -->
-
 <footer>
-
     <div class="footer-content">
-
         <div class="footer-brand">
-
             <h2>🚐 Smart Transport</h2>
-
-            <p>
-                A simple and modern transport management
-                system for organizing members, pickup
-                locations, vehicles and monthly meal
-                responsibilities.
-            </p>
-
+            <p>A simple and modern transport management system for organizing members, pickup locations, vehicles and monthly meal responsibilities.</p>
         </div>
-
-
         <div class="footer-contact">
-
             <p>📍 Dhaka, Bangladesh</p>
-
             <p>📞 +880 1700-000000</p>
-
             <p>✉️ transport@example.com</p>
-
         </div>
-
     </div>
-
-
     <div class="copyright">
-
-        © <span id="year"></span>
-        Smart Transport Management.
-        All Rights Reserved.
-
+        © <span id="year"></span> Smart Transport Management. All Rights Reserved.
     </div>
-
 </footer>
 
-
 <script>
-
-    /* Automatically show current year */
-
-    document.getElementById("year").textContent =
-        new Date().getFullYear();
-
-
-    /* Smooth scrolling */
-
-    document.querySelectorAll('a[href^="#"]').forEach(
-        function(anchor) {
-
-            anchor.addEventListener("click", function(e) {
-
-                e.preventDefault();
-
-                const target =
-                    document.querySelector(
-                        this.getAttribute("href")
-                    );
-
-                if(target) {
-
-                    target.scrollIntoView({
-                        behavior: "smooth"
-                    });
-
-                }
-
-            });
-
-        }
-    );
-
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if(target) {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    });
 </script>
 
 </body>
